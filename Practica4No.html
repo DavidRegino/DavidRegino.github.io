@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 4 Layout</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        header{
+            background-color: yellowgreen;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav{
+            background-color: yellow;
+            border: solid black;
+            padding: 10px;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        article{
+            float: left;
+            padding: 10px;
+            width: 30%;
+            background-color: yellow;
+            height: 200px;
+        }
+        section::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer{
+            background-color: black;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            nav, article{
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body bgcolor="yellow">
+    <header><h1>Tiendas de juegos digitales para pc (mas largo no se me pudo ocurrir)</h1></header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="https://store.steampowered.com/?l=spanish" target="_blank" style="text-decoration: none; color:black;">Steam</a></li>
+                <li><a href="https://www.gog.com/" target="_blank" style="text-decoration: none; color:black;">Gog</a></li>
+                <li><a href="https://www.ubisoft.com/es-mx/" target="_blank" style="text-decoration: none; color:black;">Ubisoft</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h3>Juegos de Steam</h3>
+            <nav>
+                <ul>
+                    <li><a href="https://store.steampowered.com/app/440/Team_Fortress_2/" target="_blank" style="text-decoration: none; color: rgb(19, 59, 110);">TF2</a></li>
+                    <li><a href="https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/" target="_blank" style="text-decoration: none; color: rgb(19, 59, 110);">CSGO</a></li>
+                </ul>
+            </nav>
+        </article>
+        <article>
+            <h3>Juegos GOG</h3>
+            <nav>
+                <ul>
+                    <li><a href="https://www.gog.com/en/game/postal_2" target="_blank" style="text-decoration: none; color: purple;">Postal 2</a></li>
+                    <li><a href="https://www.gog.com/en/game/cyberpunk_2077" target="_blank" style="text-decoration: none; color: purple;">Cyberpunk 2077</a></li>
+                </ul>
+            </nav>
+        </article>
+        <article>
+            <h3>Juegos Ubisoft</h3>
+            <nav>
+                <ul>
+                    <li><a href="https://www.ubisoft.com/es-mx/game/far-cry/far-cry-3" target="_blank" style="text-decoration: none; color: slategray;">Far cry 3</a></li>
+                    <li><a href="https://www.ubisoft.com/es-mx/game/assassins-creed/assassins-creed" target="_blank" style="text-decoration: none; color: slategray;">Assasins Creed 1</a></li>
+                </ul>
+            </nav>
+        </article>
+    </section>
+    <footer>
+       <p>Ramírez Hernández David Regino</p> 
+    </footer>   
+</body>
+</html>
