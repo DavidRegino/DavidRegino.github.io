@@ -6,26 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactos</title>
     <style>
+        body{
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
         h1{
             font-family: Comic sans MS;
+            color: white;
+        }
+        h2{
+            font-family: Comic sans MS;
+            color: white;
         }
         h3{
             font-family: Comic sans MS;
+            color: white;
+        }
+        div{
+            font-family: Comic sans MS;
+        }
+        p{
+            font-family: Comic sans MS;
+            color: white;
         }
         a{
             font-family: Comic sans MS;
+            color: white;
+        }
+        .menu{
+            background-color: brown;
+        }
+        .menu:hover{
+            background-color: yellowgreen;
+        }
+        .contenido{
+            border: 1px solid black;
+            border-radius: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
-<body>
-    <h1>Contactos</h1><br>
+<body background="contactos.jpg">
+    <h1>Navegación en HTML</h1>
+    <div style="border: 1px solid black;">
+            <div style="border-bottom: 1px solid black; padding: 10px;" class="menu">
+                <a href="Practica6-Noticias.html">Noticias</a>
+            </div>
+            <div style="border-bottom: 1px solid black; padding: 10px" class="menu">
+                <a href="Practica6-Contactos.html">Contactos</a>
+            </div>
+            <div style="border-bottom: 1px solid black; padding: 10px;" class="menu">
+                <a href="Practica6-Galeria.html">Galeria</a>
+            </div>
+    </div>
+    <div class="contenido">
+        <h1>Contactos</h1><br>
     <h3>Correo electronico</h3>
     <p>david.ramirez21@cetis107.edu.mx</p>
 
     <h3>Ubicación</h3>
     <img src="arribaespaña.png" alt="">
-    <div style="border: 1px solid black; padding: 10px; background-color: yellowgreen;">
-        <a href="Practica6.html">Regresar al aburrido incio</a>
     </div>
 </body>
 </html>

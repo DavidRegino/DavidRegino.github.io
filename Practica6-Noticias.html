@@ -8,28 +8,59 @@
     <style>
         p{
             font-family: Comic sans MS;
+            color: white;
         }
         h1{
             font-family: Comic sans MS;
+            color: white;
         }
         h2{
             font-family: Comic sans MS;
+            color: white;
         }
         a{
             font-family: Comic sans MS;
+            color: white;
+        }
+        body{
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+        .menu{
+            background-color: brown;
+        }
+        .menu:hover{
+            background-color: yellowgreen;
+        }
+        .contenido{
+            border: 1px solid black;
+            border-radius: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
-<body>
-    <h1>Noticias EPICAS</h1>
+<body background="noticias.gif">
+    <h1>Navegación en HTML</h1>
+    <div style="border: 1px solid black;">
+            <div style="border-bottom: 1px solid black; padding: 10px;" class="menu">
+                <a href="Practica6-Noticias.html">Noticias</a>
+            </div>
+            <div style="border-bottom: 1px solid black; padding: 10px" class="menu">
+                <a href="Practica6-Contactos.html">Contactos</a>
+            </div>
+            <div style="border-bottom: 1px solid black; padding: 10px;" class="menu">
+                <a href="Practica6-Galeria.html">Galeria</a>
+            </div>
+    </div>
+    <div class="contenido">
+        <h1>Noticias EPICAS</h1>
     <h2>Noticia epica numero 1</h2>
     <p> Odyseey es el mejor juego creo</p>
     <h2>Noticia epica numero 2</h2>
     <p>Zelda BOTW es un zelda bueno</p>
     <h2>Noticia epica numero 3</h2>
     <p>Ayuda ya no se que poner</p>
-    <div style="border: 1px solid black; padding: 10px; background-color: yellowgreen;">
-        <a href="Practica6.html">Regresar al aburrido incio</a>
     </div>
 </body>
 </html>

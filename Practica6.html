@@ -6,26 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hipervinculos</title>
     <style>
+        
+        .menu{
+            background-color: brown;
+        }
+        .menu:hover{
+            background-color: yellowgreen;
+        }
         a{
             font-family: Comic sans MS;
+            color: white;
         }
         h1{
             font-family: Comic sans MS;
         }
+        div{
+            font-family: Comic sans MS;
+        }
+        .contenido{
+            border: 1px solid black;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
     </style>
 </head>
-<body>
+<body bgcolor="yellowgreen">
     <h1>Navegación en HTML</h1>
     <div style="border: 1px solid black;">
-        <div style="border-bottom: 1px solid black; padding: 10px;">
-            <a href="Practica6-Noticias.html">Noticias</a>
-        </div>
-        <div style="border-bottom: 1px solid black; padding: 10px ">
-            <a href="Practica6-Contactos.html">Contactos</a>
-        </div>
-        <div style="border-bottom: 1px solid black; padding: 10px;">
-            <a href="Practica6-Galeria.html">Galeria</a>
-        </div>
+            <div style="border-bottom: 1px solid black; padding: 10px;" class="menu">
+                <a href="Practica6-Noticias.html">Noticias</a>
+            </div>
+            <div style="border-bottom: 1px solid black; padding: 10px" class="menu">
+                <a href="Practica6-Contactos.html">Contactos</a>
+            </div>
+            <div style="border-bottom: 1px solid black; padding: 10px;" class="menu">
+                <a href="Practica6-Galeria.html">Galeria</a>
+            </div>
+    </div>
+    <div class="contenido">
+        <h2>Bienvenido a mi pagina</h2>
+        <p>Toca algo para visualizar abajo</p> 
     </div>
 </body>
 </html>
