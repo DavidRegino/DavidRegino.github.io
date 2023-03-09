@@ -14,11 +14,47 @@
             color: black;
         }
         body{
-            font-famili:Comic sans MS;
+            font-family:Comic sans MS;
         }
     </style>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -49,7 +85,6 @@
               <p>Beat them Up</p>
               <p><a href="https://store.steampowered.com/app/1593500/God_of_War/">Juego</a></p>
             </div>
-          </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -59,6 +94,47 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
+      </div>
+    </div>
+      <div class="container">
+        <div class="row">
+          <div class="card" style="width: 18rem;">
+          <img src="pizza.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pizza Tower</h5>
+            <p class="card-text">Pizza Tower is a fast paced 2D platformer inspired by the Wario Land series, with an emphasis on movement, exploration and score attack. Featuring highly stylized pixel art inspired by the cartoons from the '90s, and a highly energetic soundtrack.</p>
+            <h3>$227.99</h3>
+            <a href="https://store.steampowered.com/app/2231450/Pizza_Tower/" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="gta.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Grand Theft Auto V</h5>
+              <p class="card-text">Grand Theft Auto V para PC ofrece a los jugadores la opción de explorar el galardonado mundo de Los Santos y el condado de Blaine con una resolución de 4K y disfrutar del juego a 60 fotogramas por segundo.</p>
+              <h3>$281.64</h3>
+              <a href="https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+          <img src="kratos}.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">God Of War</h5>
+            <p class="card-text">Kratos ha dejado atrás su venganza contra los dioses del Olimpo y vive ahora como un hombre en los dominios de los dioses y monstruos nórdicos. En este mundo cruel e implacable debe luchar para sobrevivir… y enseñar a su hijo a hacerlo también.</p>
+            <h3>$829</h3>
+            <a href="https://store.steampowered.com/app/1593500/God_of_War/" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="isaac.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">The Binding of Isaac Repentance</h5>
+            <p class="card-text">The Binding of Isaac: Rebirth is a randomly generated action RPG shooter with heavy Rogue-like elements. Following Isaac on his journey players will find bizarre treasures that change Isaac’s form giving him super human abilities and enabling him to fight off droves of mysterious creatures, discover secrets</p>
+            <h3>$534.99</h3>
+            <a href="https://store.steampowered.com/app/1426300/The_Binding_of_Isaac_Repentance/" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+        </div>
       </div>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/jquery-3.6.3.js"></script>
