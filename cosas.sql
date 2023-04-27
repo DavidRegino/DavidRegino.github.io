@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-04-2023 a las 03:15:40
--- Versión del servidor: 10.1.39-MariaDB
--- Versión de PHP: 7.3.5
+-- Tiempo de generación: 27-04-2023 a las 04:10:31
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `spotify`
+-- Base de datos: `cosas`
 --
 
 -- --------------------------------------------------------
@@ -108,7 +107,8 @@ CREATE TABLE `canciones` (
 INSERT INTO `canciones` (`id`, `nombre`, `artistas_id`, `duracion`, `genero_id`, `fecha`, `disponible`) VALUES
 (1, 'Megalovania', 1, '00:02:36', 2, '2015-09-15', 1),
 (2, 'Drunk', 3, '00:03:25', 3, '2020-06-11', 1),
-(3, 'Bohemian Rhapsody', 2, '00:06:00', 3, '1975-11-21', 1);
+(3, 'Bohemian Rhapsody', 2, '00:06:00', 3, '1975-11-21', 1),
+(4, 'ASGORE', 1, '00:02:36', 2, '2015-09-15', 1);
 
 -- --------------------------------------------------------
 
@@ -168,8 +168,9 @@ CREATE TABLE `membresias` (
 --
 
 INSERT INTO `membresias` (`id`, `nombre`, `precio`) VALUES
-(1, 'Basica', 150),
-(2, 'Premium', 500);
+(1, 'Basica', 50),
+(2, 'Premium', 300),
+(3, 'Ultra mega hiper loca tablos membresia de vip premium', 99999999999);
 
 -- --------------------------------------------------------
 
@@ -340,7 +341,7 @@ ALTER TABLE `artistas`
 -- AUTO_INCREMENT de la tabla `canciones`
 --
 ALTER TABLE `canciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `favoritas`
@@ -358,7 +359,7 @@ ALTER TABLE `genero`
 -- AUTO_INCREMENT de la tabla `membresias`
 --
 ALTER TABLE `membresias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `playlist`
