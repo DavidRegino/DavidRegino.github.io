@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-04-2023 a las 04:10:31
+-- Tiempo de generación: 05-05-2023 a las 04:40:15
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -191,7 +191,7 @@ CREATE TABLE `playlist` (
 
 INSERT INTO `playlist` (`id`, `nombre`, `imagen`, `usuarios_id`) VALUES
 (1, 'Undertale', '', 1),
-(2, 'Undertale', '', 2),
+(2, 'Queen', '', 2),
 (3, 'Drunk', '', 3);
 
 -- --------------------------------------------------------
@@ -212,7 +212,7 @@ CREATE TABLE `playlist_canciones` (
 
 INSERT INTO `playlist_canciones` (`id`, `playlist_id`, `canciones_id`) VALUES
 (1, 1, 1),
-(2, 2, 1),
+(2, 2, 3),
 (3, 3, 2);
 
 -- --------------------------------------------------------
