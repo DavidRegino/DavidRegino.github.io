@@ -1,5 +1,8 @@
 <?php
 echo "<body style='background-color:black; color:white'>";
+    $nombre = $_POST["Nombre"];
+    echo "Nombre: ".$nombre;
+    echo "<br>";
     $calificacion = 0;
     $p1 = $_POST["p1"];
     $p2 = $_POST["p2"];
