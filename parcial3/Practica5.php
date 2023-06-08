@@ -1,120 +1,66 @@
 <?php
 
-    $cuadros = $_POST["cuadro"];
+$cuadros = $_POST["cuadro"];
 
-    for($i=0; $i<count($cuadros); $i++){
-        echo "[$cuadros[$i]]";
-        if($cuadros[$i] != "X" && $cuadros[$i] != "O"){
-            echo "<h2>Solo se permiten X y/o O</h2>";
-            return;
-        }
-        if($i==2 || $i==5){
-            echo "<br>";
-        }
-    }
+echo "<h1>Resultado Final</h1>";
 
-    /*
-    [0][1][2]
-    [.][.][.]
-    [.][.][.]
-    */
-    if($cuadros[0] == "X" && $cuadros[1] == "X" && $cuadros[2] == "X"){
-        echo "<h1>SI ERES X GANASTE CON LA PRIMERA LINEA HORIZONTAL ERES UN GENIO FELICIDADES</h1><br><img src='genio.png'>";
-        return;
-    }else if($cuadros[0] == "O" && $cuadros[1] == "O" && $cuadros[2] == "O"){
-        echo "<h1>SI ERES O GANASTE CON LA PRIMERA LINEA HORIZONTAL ERES UN GENIO FELICIDADES</h1><br><img src='genio.png'>";
-        return;
-    }
+// Definir Ganador
+/*
+[0][1][2]
+[3][4][5]
+[6][7][8]
+*/
 
-    /*
-    [.][.][.]
-    [3][4][5]
-    [.][.][.]
-    */
-    if($cuadros[3] == "X" && $cuadros[4] == "X" && $cuadros[5] == "X"){
-        echo "<h1>SI ERES X GANASTE CON LA SEGUNDA LINEA HORIZONTAL ERES UN GENIO FELICIDADES</h1><br><img src='genio.png'>";
-        return;
-    }else if($cuadros[3] == "O" && $cuadros[4] == "O" && $cuadros[5] == "O"){
-        echo "<h1>SI ERES O GANASTE CON LA SEGUNDA LINEA HORIZONTAL ERES UN GENIO FELICIDADES</h1><br><img src='genio.png'>";
-        return;
-    }
+$cuadroganador = [];
+$Simbolo = [];
 
-    /*
-    [.][.][.]
-    [.][.][.]
-    [6][7][8]
-    */
-    if($cuadros[6] == "X" && $cuadros[7] == "X" && $cuadros[8] == "X"){
-        echo "<h1>SI ERES X GANASTE CON LA TERCERA LINEA HORIZONTAL ERES UN GENIO FELICIDADES</h1><br><img src='genio.png'>";
-        return;
-    }else if($cuadros[6] == "O" && $cuadros[7] == "O" && $cuadros[8] == "O"){
-        echo "<h1>SI ERES O GANASTE CON LA TERCERA LINEA HORIZONTAL ERES UN GENIO FELICIDADES</h1><br><img src='genio.png'>";
-        return;
-    }
+// Comprobar ganador
+// Horizontal
+if ($cuadros[0] == $cuadros[1] && $cuadros[0] == $cuadros[2]) {
+    $cuadroganador = [0, 1, 2];
+} else if ($cuadros[3] == $cuadros[4] && $cuadros[3] == $cuadros[5]) {
+    $cuadroganador = [3, 4, 5];
+} else if ($cuadros[6] == $cuadros[7] && $cuadros[6] == $cuadros[8]) {
+    $cuadroganador = [6, 7, 8];
+}
 
-    /*
-    [0][.][.]
-    [3][.][.]
-    [6][.][.]
-    */
-    if($cuadros[0] == "X" && $cuadros[3] == "X" && $cuadros[6] == "X"){
-        echo "<h1>SI ERES X GANASTE CON LA PRIMERA LINEA VERTICAL ERES UN GENIO FELICIDADES</h1><br><img src='genio.png'>";
-        return;
-    }else if($cuadros[0] == "O" && $cuadros[3] == "O" && $cuadros[6] == "O"){
-        echo "<h1>SI ERES O GANASTE CON LA PRIMERA LINEA VERTICAL ERES UN GENIO FELICIDADES</h1><br><img src='genio.png'>";
-        return;
-    }
+// Vertical
+if ($cuadros[0] == $cuadros[3] && $cuadros[0] == $cuadros[6]) {
+    $cuadroganador = [0, 3, 6];
+} else if ($cuadros[1] == $cuadros[4] && $cuadros[1] == $cuadros[7]) {
+    $cuadroganador = [1, 4, 7];
+} else if ($cuadros[2] == $cuadros[5] && $cuadros[2] == $cuadros[8]) {
+    $cuadroganador = [2, 5, 8];
+}
 
-    /*
-    [.][1][.]
-    [.][4][.]
-    [.][7][.]
-    */
-    if($cuadros[1] == "X" && $cuadros[4] == "X" && $cuadros[7] == "X"){
-        echo "<h1>SI ERES X GANASTE CON LA SEGUNDA LINEA VERTICAL ERES UN GENIO FELICIDADES</h1><br><img src='genio.png'>";
-        return;
-    }else if($cuadros[1] == "O" && $cuadros[4] == "O" && $cuadros[7] == "O"){
-        echo "<h1>SI ERES O GANASTE CON LA SEGUNDA LINEA VERTICAL ERES UN GENIO FELICIDADES</h1><br><img src='genio.png'>";
-        return;
-    }
+// Diagonal
+if ($cuadros[0] == $cuadros[4] && $cuadros[0] == $cuadros[8]) {
+    $cuadroganador = [0, 4, 8];
+} else if ($cuadros[2] == $cuadros[4] && $cuadros[2] == $cuadros[6]) {
+    $cuadroganador = [2, 4, 6];
+}
 
-    /*
-    [.][.][2]
-    [.][.][5]
-    [.][.][8]
-    */
-    if($cuadros[2] == "X" && $cuadros[5] == "X" && $cuadros[8] == "X"){
-        echo "<h1>SI ERES X GANASTE CON LA TERCERA LINEA VERTICAL ERES UN GENIO FELICIDADES</h1><br><img src='genio.png'>";
-        return;
-    }else if($cuadros[2] == "O" && $cuadros[5] == "O" && $cuadros[8] == "O"){
-        echo "<h1>SI ERES O GANASTE CON LA TERCERA LINEA VERTICAL ERES UN GENIO FELICIDADES</h1><br><img src='genio.png'>";
-        return;
+// Imprimir resultado
+echo "<h1>";
+for ($i = 0; $i < 9; $i++) {
+    $cuadro = $cuadros[$i];
+    if ($cuadroganador && in_array($i,$cuadroganador)) {
+        echo "<span style='color: green;'>[$cuadro]</span>";
+        $Simbolo = $cuadro;
+    } else {
+        echo "[$cuadro]";
     }
+    if ($i == 2 || $i == 5) {
+        echo "<br>";
+    }
+}
+echo "</h1>";
 
-    /*
-    [0][.][.]
-    [.][4][.]
-    [.][.][8]
-    */
-    if($cuadros[0] == "X" && $cuadros[4] == "X" && $cuadros[8] == "X"){
-        echo "<h1>SI ERES X GANASTE CON UNA DIAGONAL ERES ALBERT EINSTEIN FELICIDADES</h1><br><img src='genio.png'>";
-        return;
-    }else if($cuadros[0] == "O" && $cuadros[4] == "O" && $cuadros[8] == "O"){
-        echo "<h1>SI ERES O GANASTE CON UNA DIAGONAL ERES ALBERT EINSTEIN FELICIDADESS</h1><br><img src='genio.png'>";
-        return;
-    }
-
-    /*
-    [.][.][2]
-    [.][4][.]
-    [8][.][.]
-    */
-    if($cuadros[2] == "X" && $cuadros[4] == "X" && $cuadros[8] == "X"){
-        echo "<h1>SI ERES X GANASTE CON UNA DIAGONAL ERES ALBERT EINSTEIN FELICIDADES</h1><br><img src='genio.png'>";
-        return;
-    }else if($cuadros[2] == "O" && $cuadros[4] == "O" && $cuadros[8] == "O"){
-        echo "<h1>SI ERES O GANASTE CON UNA DIAGONAL ERES ALBERT EINSTEIN FELICIDADES</h1><br><img src='genio.png'>";
-        return;
-    }
+// Imprimir mensaje de ganador o empate
+if (!empty($cuadroganador)) {
+    echo "<h1 style='color: green;'>¡El Ganador Es: $Simbolo!</h1>";
+} else {
+    echo "<h1>Empate</h1>";
+}
 
 ?>
