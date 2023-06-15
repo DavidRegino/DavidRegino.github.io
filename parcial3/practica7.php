@@ -11,18 +11,26 @@
     <div class="container">
         <h1>Serpientes y escaleras</h1>
         <?php
-            echo "<table style='border: 1px solid black;'>";
-            $contador = 1;
-            for ($i = 1; $i <= 10; $i++) {
-                echo "<tr style='border: 1px solid black;'>";
-                for ($j = 1; $j <= 10; $j++) {
-                    echo "<td style='position: relative; border: 1px solid black;'>$contador</td>";
-                    $contador++;
-                }
-                echo "</tr>";
-            }
-                echo "</table>";
-        ?>
+
+// Colores
+$colores = array('#C80606', '#FFA200', '#4BEF4E', '#4BEFED', '#3535FF');
+
+// Dibujar el tablero
+echo '<table style="border-collapse: collapse;">';
+$numero = 100;
+for ($i = 0; $i < 10; $i++) {
+    echo '<tr>';
+    for ($j = 0; $j < 10; $j++) {
+        $color = $colores[array_rand($colores)];
+        echo '<td style="width: 60px; height: 60px; text-align: center; background-color: ' . $color . ';">' . $numero . '</td>';
+        $numero--;
+    }
+    echo '</tr>';
+}
+echo '</table>';
+?>
+    <input type="button" value="Dado">
+
     </div>
 </body>
 </html>
