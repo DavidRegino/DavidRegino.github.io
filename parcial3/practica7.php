@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <title>Document</title>
+    <style>
+        #dado {
+            width: 100px; /* Establecer el ancho deseado */
+            height: 100px; /* Establecer la altura deseada */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -29,8 +35,29 @@ for ($i = 0; $i < 10; $i++) {
 }
 echo '</table>';
 ?>
-    <input type="button" value="Dado">
+    
 
+    <?php
+    //randomizer
+    function dado(){
+        $dado = array('dado/1.png','dado/2.png','dado/3.png','dado/4.png','dado/5.jpg','dado/6.jpg');
+        $numero = $dado [rand(0, count($dado)-1)];
+        return $numero;
+    }
+    //seleccion
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (isset($_POST['boton'])) {
+        }
+    } else {
+        $numero = 'dado/1.png'; // Imagen por defecto al cargar la página
+    }
+    $numero=dado();
+    ?>
+    
+    <form method="POST">
+        <input type="submit" value="Dado" name="dado">
+    </form>
+    <img id="dado" src="<?php echo $numero?>" alt="numero">
     </div>
 </body>
 </html>
