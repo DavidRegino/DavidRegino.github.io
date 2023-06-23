@@ -15,6 +15,8 @@
                     if(isset($_POST["carta1"])){
                         $carta1=$_POST["carta1"];
                         $carta2=$_POST["carta2"];
+                        $carta=rand(1,54);
+                        echo "<h2>Carta actual<img src='fotos_loteria/$carta.jpeg' class='img-fluid' width='100px'></h2>";
                     }else{
                         $carta1=[];
                         $total=0;
@@ -45,7 +47,7 @@
                         
                         //cargar tablero
                         $carta;
-                        for($i=1; $i<=16; $i++){
+                        for($i=0; $i<16; $i++){
                             $numero = rand(1,54);
                             echo "<div class='col-3 p-0'><img  src='fotos_loteria/$numero.jpeg' class='img-thumbnail'></div>";
                             echo "<input type='hidden' name='carta1[]' value='".$carta1[$i]."'>";
@@ -58,10 +60,10 @@
                         <?php
                         //cargar tablero
                     $carta;
-                    for($i=1; $i<=16; $i++){
+                    for($i=0; $i<16; $i++){
                         $numero = rand(1,54);
                         echo "<div class='col-3 p-0'><img  src='fotos_loteria/$numero.jpeg' class='img-thumbnail'></div>";
-                        echo "<input type='hidden' name='carta1[]' value='".$carta1[$i]."'>";
+                        echo "<input type='hidden' name='carta2[]' value='".$carta2[$i]."'>";
                     }
                         ?>
                         </div>
